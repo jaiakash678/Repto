@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Repto – Food delivered fast</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="site-header">
+    <div class="container nav">
+      <a href="#" class="logo">Rep<span>to</span></a>
+      <nav class="nav-links">
+        <a href="#menu">Menu</a>
+        <a href="#how">How it works</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="nav-right">
+        <a href="login.html" id="authLink" class="login-link">Login</a>
+        <button id="cartBtn" class="cart-btn">🛒 Cart <span id="cartCount">0</span></button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <h1>Hungry? Get your favourite food <span>delivered fast.</span></h1>
+          <p>Order from the best local kitchens and get it at your door in about 30 minutes.</p>
+          <form id="searchForm" class="search-box">
+            <input type="text" id="locationInput" placeholder="Enter your delivery area" required>
+            <button type="submit">Find food</button>
+          </form>
+          <p id="searchMessage" class="search-message"></p>
+        </div>
+        <div class="hero-art">🍕🍔🍛</div>
+      </div>
+    </section>
+
+    <!-- ===== MENU ===== -->
+    <section id="menu" class="section">
+      <div class="container">
+        <h2>Popular dishes</h2>
+        <p class="section-sub">Pick a category or browse everything.</p>
+
+        <div id="filters" class="filters">
+          <button class="filter active" data-category="All">All</button>
+          <button class="filter" data-category="Pizza">Pizza</button>
+          <button class="filter" data-category="Burgers">Burgers</button>
+          <button class="filter" data-category="Biryani">Biryani</button>
+          <button class="filter" data-category="South Indian">South Indian</button>
+          <button class="filter" data-category="Desserts">Desserts</button>
+        </div>
+
+        <div id="menuGrid" class="menu-grid"></div>
+      </div>
+    </section>
+
+    <!-- ===== HOW IT WORKS ===== -->
+    <section id="how" class="section alt">
+      <div class="container">
+        <h2>How Repto works</h2>
+        <div class="steps">
+          <div class="step">
+            <div class="step-icon">📍</div>
+            <h3>1. Choose your area</h3>
+            <p>Tell us where you are so we show kitchens near you.</p>
+          </div>
+          <div class="step">
+            <div class="step-icon">🍽️</div>
+            <h3>2. Pick your food</h3>
+            <p>Add your favourite dishes to the cart.</p>
+          </div>
+          <div class="step">
+            <div class="step-icon">🛵</div>
+            <h3>3. Enjoy at home</h3>
+            <p>Our delivery partner brings it hot to your door.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer id="contact" class="footer">
+    <div class="container">
+      <div class="logo">Rep<span>to</span></div>
+      <p>Questions? Email hello@repto.example</p>
+      <p class="small">© 2026 Repto. This is a demo project.</p>
+    </div>
+  </footer>
+
+  <!-- ===== CART DRAWER ===== -->
+  <div id="overlay" class="overlay"></div>
+  <aside id="cart" class="cart">
+    <div class="cart-head">
+      <h3>Your cart</h3>
+      <button id="closeCart" class="close-btn" aria-label="Close cart">✕</button>
+    </div>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="cart-foot">
+      <div class="total-row">
+        <span>Total</span>
+        <strong id="cartTotal">₹0</strong>
+      </div>
+      <button id="checkoutBtn" class="checkout-btn">Place order</button>
+    </div>
+  </aside>
+
+  <script src="script.js"></script>
+</body>
+</html>
